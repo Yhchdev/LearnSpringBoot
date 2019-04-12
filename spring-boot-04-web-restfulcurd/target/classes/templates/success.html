@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页</h1>
+<hr/>
+
+<div th:id="${hello}" th:class="${hello}" th:text="${hello}">该内容会被替换</div>
+
+<hr/>
+
+<div th:text="${html}"></div>
+
+<hr/>
+<div th:utext="${html}"></div>
+
+<hr/>
+
+<h1>
+    <div th:text="${user}" th:each="user:${users}"></div>
+</h1>
+
+<hr/>
+
+<div>
+    <span th:each="user:${users}">[[${user}]]</span><br/>
+</div>
+
+</body>
+</html>
